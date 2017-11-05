@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.hbo.got.entity.Meaning" table="meaning">
+        <id name="id" type="java.lang.Long">
+            <column name="meaning_id" />
+            <generator class="native" />
+        </id>
+        <property name="enMean" type="string">
+            <column name="en_mean" length="500"/>
+        </property>
+        <property name="viMean" type="string">
+            <column name="vi_mean" length="500"/>
+        </property>
+        
+        <many-to-one name="vocabulary" column="vocabulary_id" class="com.hbo.got.entity.Vocabulary" not-null="true" />
+        
+    </class>
+</hibernate-mapping>

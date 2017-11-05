@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.hbo.got.entity.Vocabulary" table="vocabulary">
+        <id name="id" type="java.lang.Long">
+            <column name="vocabulary_id" />
+            <generator class="native" />
+        </id>
+        <property name="voca" type="string">
+            <column name="voca" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="brPro" type="string">
+            <column name="br_pro" length="50"/>
+        </property>
+        <property name="amPro" type="string">
+            <column name="am_pro" length="50"/>
+        </property>
+        <property name="brVoice" type="string">
+            <column name="br_voice" length="50"/>
+        </property>
+        <property name="amVoice" type="string">
+            <column name="am_voice" length="50"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>

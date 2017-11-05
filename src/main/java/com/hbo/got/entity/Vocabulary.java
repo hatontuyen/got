@@ -2,6 +2,7 @@ package com.hbo.got.entity;
 
 
 public class Vocabulary {
+	public final static String ENTITY_NAME = "Vocabulary";
 	private long id;
 	private String voca;
 	private String brPro;
